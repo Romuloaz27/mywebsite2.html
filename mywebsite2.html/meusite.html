@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAF | Núcleo de Apoio Contábil e Fiscal</title>
+    <link rel="stylesheet" href="second.css">
+    <link rel="shortcut icon" href="mywebsite2.html/favicon-16x16.png" type="image/x-icon">
+
+</head>
+<body>
+    <form id="cadastroForm" onsubmit="return goToAgendamento(event)">
+        <h1 class="cadastro">Cadastre-se</h1> <hr>
+        <div class="input-box">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="CPF/CNPJ" required> 
+            <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box"> 
+            <input type="text" placeholder="Endereço" required>
+            <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="E-mail" required>
+            <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Telefone" required>
+            <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Senha" required>
+            <i class="bx bxs-user"></i>
+        </div>
+        <button type="submit" class="btn">Registrar</button>
+    </form>
+    <script>
+        function goToAgendamento(event) {
+            event.preventDefault(); // Prevent form from submitting
+            const nome = document.getElementById('nome').value;
+            window.location.href = `agendamento.html?nome=${encodeURIComponent(nome)}`;
+        }
+    </script>
+</body>
+</html>
